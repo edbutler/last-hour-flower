@@ -1,0 +1,28 @@
+##jonquil
+
+# Copyright 2015 Kristin Siu and Eric Butler
+
+[intro]
+pio(angry): But maybe it's not important. If I can't remember, what use is there in trying to remember now? My time is better spent thinking on the things I can remember...
+pio(sad): Time to get started!
+$async user.get_protag_name("Excuse me, but what's your name?", jvn, state, advance);
+nchar: That's a nice name, {protagchan}...
+
+[test]
+pio(beady): Hello {protagchan}! This is text that I am saying.
+pio: This is text that I am saying with default expr!#$%#^Y^%
+$ state.foo = "potato";
+{ exhaustive
+    * Choice 1
+    nchar: stuff that goes with choice one
+    pio(brave): asdfsdfsdf
+
+    * choice 2
+    {
+        * choice 3
+        $ console.log("hi");
+        * choice 4
+        pio: I am talking!
+    }
+}
+

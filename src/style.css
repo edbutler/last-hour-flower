@@ -1,0 +1,230 @@
+/* Copyright 2015 Kristin Siu and Eric Butler */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+p, h1, h2, h3, h4, h5, h6, span, label, input, button, li {
+	font-family: 'Open Sans', sans-serif;
+	color: #444;
+}
+
+a {
+	color: #d61549;
+}
+
+
+a:hover {
+	color: #ff658f;
+}
+
+#content p {
+	color: #333;
+}
+
+label, input, button, li {
+	font-size: 18pt;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+label {
+	text-align: center;
+}
+
+#main {
+	width: 800px;
+	margin: 100px auto 0 auto;
+}
+
+#content {
+	position: relative;
+	width: 100%;
+	height: 600px;
+	border: 2px solid #777;
+	border-radius: 10px;
+}
+
+#content * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#background-window {
+	position: absolute;
+	background-color: black;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 8px;
+}
+
+#title-window {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 8px;
+}
+
+#title-text {
+	position: absolute;
+	width: 80%;
+	font-size: 400%;
+	top: 20%;
+	right: 10%;
+	text-align: right;
+}
+
+#btn-start-game {
+	display: none;
+	position: absolute;
+	top: 59%;
+	right: 10%;
+	cursor: pointer;
+	width: 250px;
+	margin: 15px 0;
+	padding: 7px;
+}
+
+#title-credits-tagline {
+	position: absolute;
+	left: 3%;
+	bottom: 3%;
+}
+
+.credits-text {
+	font-size: 125%;
+}
+
+.copyright-text {
+	font-size: 75%;
+}
+
+#viz-window {
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 72%;
+	top: 0;
+	left: 0;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+#choices {
+	display: none;
+	position: absolute;
+	top: 29%;
+	left: 5%;
+	list-style: none;
+}
+
+#choices > li {
+	width: 400px;
+	cursor: pointer;
+	margin: 15px 0;
+	padding: 7px;
+	border-radius: 10px;
+	border: 2px solid #777;
+	background-color: #eee;
+}
+
+#choices > li:hover, li:active {
+	border-color: #555;
+	background-color: #ccc;
+}
+
+#query-text-form {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 22%;
+	right: 22%;
+	text-align: center;
+	border: 2px solid #777;
+	padding: 10px;
+	border-radius: 10px;
+	background-color: #eee;
+}
+
+#query-text-label, #query-text-answer-line {
+	display: block;
+	margin: 10px auto;
+}
+
+#query-text-answer-line > button {
+	margin-left: 10px;
+}
+
+#textbox {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 28%;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(240,240,240,0.9);
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	text-shadow: 1px 1px rgba(255,255,255,0.8);
+}
+
+#speaker {
+	position: absolute;
+	width: 17%;
+	height: 100%;
+	left: 0;
+	top: 0;
+}
+
+#speaker > p {
+	font-size: 30pt;
+	font-weight: bold;
+	text-align: center;
+	padding: 10px;
+}
+
+#spoken {
+	position: absolute;
+	width: 83%;
+	height: 100%;
+	right: 0;
+	top: 0;
+}
+
+#spoken > p {
+	font-size: 20pt;
+	text-align: left;
+	padding: 10px 10px 10px 0;
+}
+
+.left {
+	float: left;
+	text-align: left;
+}
+
+.left > a {
+	margin-right: 20px;
+}
+
+.right {
+	float: right;
+	text-align: right;
+}
+
+.clear {
+	clear: both;
+}
+

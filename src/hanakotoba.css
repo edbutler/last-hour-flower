@@ -1,0 +1,55 @@
+/* Copyright 2015 Kristin Siu and Eric Butler */
+#timer {
+	position: absolute;
+	width: 128px;
+	height: 128px;
+	background-image: url("images/timer.png");
+	transform: translate(20px,10px);
+	-webkit-transform: translate(20px,10px);
+}
+
+#pio {
+	display: none;
+	position: absolute;
+	transform: translate(500px,50px);
+	-webkit-transform: translate(500px,50px);
+}
+
+#pio, #pio-base-s, #pio-base-e, #pio-sheet {
+	position: absolute;
+	width: 217px;
+	height: 412px;
+	background-repeat: no-repeat;
+}
+
+#pio-sheet {
+	background-image: url('images/pio_sheet.png');
+}
+
+.bg-img, #bg-border {
+	position: absolute;
+	width: 800px;
+	height: 600px;
+	border-radius: 8px;
+}
+
+.bg-img {
+	display: none;
+}
+
+.bgelem1 {
+	position: absolute;
+	top: -90px;
+	left: -160px;
+	width: 340px;
+	height: 261px;
+}
+
+.bgelem2 {
+	position: absolute;
+	bottom: -200px;
+	right: -100px;
+	width: 422px;
+	height: 500px;
+}
+

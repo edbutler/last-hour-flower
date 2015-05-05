@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Last Hour for a Flower</title>
+    <!-- build:css style.css -->
+		<link type="text/css" rel="stylesheet" href="style.css">
+		<link type="text/css" rel="stylesheet" href="hanakotoba.css">
+    <!-- endbuild -->
+		<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic">
+    <!-- build:js app.js -->
+		<script type="text/javascript" src="bower_components/lodash/dist/lodash.js"></script>
+		<script type="text/javascript" src="bower_components/jquery/dist/jquery.js"></script>
+		<script type="text/javascript" src="util.js"></script>
+		<script type="text/javascript" src="parsing.js"></script>
+		<script type="text/javascript" src="simulator.js"></script>
+		<script type="text/javascript" src="renderer.js"></script>
+		<script type="text/javascript" src="hanakotoba.js"></script>
+    <!-- endbuild -->
+		<script type="text/javascript">
+			function start(script_data) {
+				var sim = Simulator(html_renderer, hanakotoba, [script_data]);
+				sim.start();
+			}
+
+			$(function() {
+				$.get("script.txt", function(data) {
+					start(data);
+				});
+			});
+		</script>
+	</head>	
+	<body>
+		<div id="main">
+			<!-- the centered box with the game in it -->
+			<div id="content">
+				<!-- border decorations -->
+				<div id="bgelem1-e" class="bgelem1"></div>
+				<div id="bgelem1-s" class="bgelem1"></div>
+				<div id="bgelem2-e" class="bgelem2"></div>
+				<div id="bgelem2-s" class="bgelem2"></div>
+				<!-- all background images -->
+				<div id="background-window">
+					<img class="bg-img" id="bg-door" src="images/bg-door.png">
+					<img class="bg-img" id="bg-bedroom" src="images/bg-bedroom.png">
+					<img class="bg-img" id="bg-title" src="images/bg-title.png">
+					<img id="bg-border" src="images/bg-border.png">
+				</div>
+				<!-- the title screen -->
+				<div id="title-window">
+					<h1 id="title-text">Last Hour<br>for a Flower</h1>
+					<div id="title-credits-tagline">
+						<p class="credits-text">A game by Intrepid Hamster Studios</p>
+						<p class="copyright-text">Kristin Siu and Eric Butler</p>
+					</div>
+					<button id="btn-start-game">Start Game</button>
+				</div>
+				<!-- pio, etc. and user choice interface elements -->
+				<div id="viz-window">
+					<div id="pio">
+						<div id="pio-base-e"></div>
+						<div id="pio-base-s"></div>
+						<div id="pio-sheet"></div>
+					</div>
+					<ul id="choices"></ul>
+					<form id="query-text-form" action="javascript:undefined">
+						<label id="query-text-label" class="clickable" for="query-text-answer"></label>
+						<div id="query-text-answer-line">
+							<input id="query-text-answer">
+							<button id="query-text-button" class="clickable">Okay</button>
+						</div>
+					</form>
+				</div>
+				<!-- dialogue text -->
+				<div id="textbox">
+					<div id="speaker">
+						<p id="display-character"></p>
+					</div>
+					<div id="spoken">
+						<p id="display-text"></p>
+					</div>
+				</div>
+			</div>
+			<div id="footer">
+				<p class="left"><a href="about.html">Help and Credits</a></p>
+				<!-- @ifdef DEV -->
+				<div class="clear">
+					<p>Jump to Scene (will activate after advancing script):</p>
+					<select id="debug-scene-jump">
+						<option value=""></option>
+					</select>
+				</div>
+				<!-- @endif -->
+			</div>
+		</div>
+	</body>
+</html>
+
